@@ -1,0 +1,200 @@
+/*                             Author: Daniel Janitor                               */
+/*                             Year: 2021 - June                                    */
+/*                             Application: EMPLOYEE MANAGEMENT APPLICATION         */
+/*                             2-PART USERS - CSS                                   */
+.users-list-wrapper {
+    flex-wrap: wrap;
+    padding: 3rem;
+}
+
+.card {
+    border-radius: 4px;
+    flex-basis: 250px;
+    height: auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+.rowcard {
+    margin: 1.2rem;
+}
+
+.delete,
+.edit {
+    border-radius: 2px;
+    margin: 5px 50px;
+    display: block;
+}
+
+.card-list {
+    font-weight: bold;
+}
+
+
+.stat {
+    margin: 3rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: auto;
+}
+
+.logo {
+    color: #fff;
+    font-family: 'Contrail One', cursive;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+    padding-top: 0.5rem;
+}
+
+.container-fluid {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    flex-basis: 40px;
+    border-bottom: 1px solid #999;
+}
+
+.content {
+    flex: 1;
+}
+
+.footer {
+    flex-basis: 25px;
+}
+
+.output {
+    border: 1px solid black;
+}
+
+.btn {
+    border-radius: 2px;
+}
+
+.main-menu {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-menu-list {
+    padding: 1rem;
+    list-style: none;
+}
+
+.link {
+    padding: 1rem 0;
+    color: gainsboro;
+}
+
+.link:hover {
+    color: #3498db;
+    cursor: pointer;
+}
+
+.activeLink {
+    color: #3498db;
+}
+
+.content-section {
+    height: 100%;
+
+}
+
+.cont {
+    display: none;
+}
+
+.activeContent-section {
+    display: block;
+}
+
+.btn-create-user {
+    width: 150px;
+    border-radius: 4px;
+}
+
+.search {
+    width: 180px;
+    border-radius: 4px;
+}
+
+.users-info-block {
+    height: auto;
+}
+
+.row-user-header {
+    height: 90px;
+}
+
+.users-list {
+    height: auto;
+}
+
+.table {
+    background: black;
+    height: 20px;
+}
+
+.popUp {
+    top: 300px;
+    width: 800px;
+    height: 500px;
+    background: white;
+    border: 1px solid gainsboro;
+    border-radius: 4px;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+}
+
+.poph {
+    text-align: right;
+    flex-basis: 10px;
+}
+
+.popUpclose {
+    text-align: right;
+    padding: 5px 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.popCancelBtn,
+.savePop {
+    cursor: pointer;
+    width: 150px;
+    border-radius: 4px;
+}
+
+.popcontent {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.popcontent input {
+    width: 150px;
+    margin: 1rem;
+}
+
+.popbuttonsh {
+    flex-basis: 10px;
+}
+
+.hr-users {
+    color: gainsboro;
+}

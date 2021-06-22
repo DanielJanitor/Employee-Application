@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--FONT AWSOME-->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Contrail+One&display=swap" rel="stylesheet">
+
+    <!--BOOTSTRAP 5-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://bootswatch.com/4/yeti/bootstrap.min.css">
+
+    <!--My CSS Style-->
+    <link rel="stylesheet" href="1_overview_section_style.css">
+    <link rel="stylesheet" href="2_users_section_style.css">
+    <link rel="stylesheet" href="3_trainings_section_style.css">
+    <link rel="stylesheet" href="4_comment_section_style.css">
+
+    <title>Employee Management App</title>
+
+</head>
+
+<body>
+    <!--WEB CONTAINER-->
+    <div class="container-fluid">
+        <!--HEADER section-->
+        <div class="row bg-dark d-flex justify-content-center align-items-center header">
+            <div class="col-md-2 d-flex justify-content-center align-items-center">
+                <h1 class="logo">JD</h1>
+            </div>
+            <div class="col-md-8 d-flex justify-content-center align-items-center">
+                <h2 class="text-light align-self-center"><span><i class="fas fa-user-friends"></i></span> Employee Management App</h2>
+            </div>
+            <div class="col-md-2 d-flex justify-content-center align-items-center">
+                <h5 class="text-light date"></h5>
+            </div>
+        </div>
+        <!--CONTENT-->
+        <div class="row bg-white content">
+            <div class="col-xs-12  col-sm-12 col-md-3 col-lg-3 col-xl-2 col-xxl-2 bg-dark main-menu">
+                <div class="main-menu-wrapper mt-5">
+                    <h3 class="text-center mb-5 text-light">Main Menu</h3>
+                    <ul class="main-menu-list">
+                        <li class="link activeLink" id="overview-container"><i class="fas fa-chart-line"></i> Overview</li>
+                        <li class="link" id="users-container"><i class="far fa-address-book"></i> Users</li>
+                        <li class="link" id="trainings-container"><i class="fas fa-graduation-cap"></i> Trainigs</li>
+                        <li class="link" id="comments-container"><i class="far fa-comment"></i> Comments</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10 col-xxl-10 content-section">
+                <div class="cont overview-container activeContent-section">
+                    <!--OVERVIEW SECTION-->
+                    <div class="row row-overview-header p-3 bg-white">
+                        <h1>Overview</h1>
+                    </div>
+                    <hr class="overview-hr">
+                    <div class="overview-content">
+                        <div class="card-overview">
+                            <div class="user">
+                                <h1>USERS</h1>
+                                <h6>Total Users:</h6>
+                                <span class="ov totalUsers"></span>
+                            </div>
+                        </div>
+                        <div class="card-overview">
+                            <div class="trainings">
+                                <h1>TRAININGS</h1>
+                                <h6>Total Trainings:</h6>
+                                <span class="ov totalTrainings"></span>
+                            </div>
+                        </div>
+                        <div class="card-overview">
+                            <div class="categories">
+                                <h1>CATEGORIES</h1>
+                                <h6>Total Categories:</h6>
+                                <span class="ov totalCategories"></span>
+                            </div>
+                        </div>
+                        <div class="card-overview">
+                            <div class="comments">
+                                <h1>COMMENTS</h1>
+                                <h6>Total Comments:</h6>
+                                <span class="ov totalComments"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--USER SECTION-->
+                <div class="cont users-container">
+                    <div class="row row-user-header  bg-white d-flex justify-content-center align-items-center">
+                        <div class="col-sm-4 col-xs-4 col-md-4 col-lg-6 col-xxl-10 ">
+                            <h1 class="ml-5">Employee</h1>
+                        </div>
+                        <div class="col-sm-4 col-xs-4  col-md-4 col-lg-3 col-xxl-1 text-right">
+                            <button class="btn btn-primary btn-create-user "><span class="pr-2"><i class="fas fa-plus"></i></span> New User</button>
+                        </div>
+                        <div class="col-sm-4 col-xs-4 col-md-4 col-lg-3 col-xxl-1 mr-0">
+                            <input type="text" class="search form-control" placeholder="Search User...">
+                        </div>
+                    </div>
+                    <hr class="hr-users">
+                    <div class="row users-info-block">
+                        <div class="col-sm-6 bg-white mt-4 mb-4 stat">
+                            
+                        </div>
+                    </div>
+                    <div class="row users-list bg-white">
+                        <div class="users-list-wrapper d-flex justify-content-center"></div>
+                    </div>
+                </div>
+                <!--TRAINING SECTION-->
+                <div class="cont trainings-container">
+                    <!--PopUP for Training-->
+                    <div class="row popUPTraining">
+                        <div class="popUPTraining-close">
+                            <div class="popUPTraining-close-btn btn btn-danger">X</div>
+                        </div>
+                        <div class="row popUPTraining-inputs">
+                            <form class='training-form'>
+                                <div class='form-group'>
+                                    <label for="training-name" class="label-training">New Training</label>
+                                    <input class="training-name form-control" placeholder='Name' required>
+                                </div>
+                                <div class='form-group'>
+                                    <label for="training-category-drop" class="label-training">Category</label>
+                                    <select class="training-category-drop form-control">
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+                                <div class='form-group'>
+                                    <label for="training-description" class="label-training">Description</label>
+                                    <input class="training-description form-control" placeholder='Description...'>
+                                </div>
+                                <div class='form-group'>
+                                    <label for="training-costs" class="label-training">Costs</label>
+                                    <input class="training-costs form-control" placeholder='Costs...'>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="popUPTraining-btns">
+                            <button class="btn btn-primary popUPTraining-save">Save</button>
+                            <button class="btn btn-secondary popUPTraining-cancel">Cancel</button>
+                        </div>
+                    </div>
+                    <!--PopUp for Category -->
+                    <div class="row popUPCategory">
+                        <div class="popUPCategory-close">
+                            <button class="popUPCategory-close-btn btn btn-danger">X</button>
+                        </div>
+                        <div class="row popUPCategory-inputs">
+                            <form class='category-form'>
+                                <div class='form-group'>
+                                    <label for="new-category-name" class="labelcategory">New Category</label>
+                                    <input class="new-category-name form-control" placeholder='Name' required>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="popUPCategory-btns">
+                            <button type="button" class="btn btn-primary popUPCategory-save">Save</button>
+                            <button type="button" class="btn btn-secondary popUPCategory-cancel">Cancel</button>
+                        </div>
+                    </div>
+                    <!--Training Header Content-->
+                    <div class="row row-training-header  bg-white d-flex justify-content-center align-items-center">
+                        <div class="col-sm-4 col-xs-4 col-md-4 col-lg-6 col-xxl-8 ">
+                            <h1 class="ml-5">Trainings</h1>
+                        </div>
+                        <div class="col-sm-4 col-xs-4 col-md-4 col-lg-3 col-xxl-1 text-right">
+                            <button type="button" class="btn btn-primary btn-create-training"><span class="pr-2"><i class="fas fa-plus"></i></span> New Training</button>
+                        </div>
+                        <div class="col-sm-4 col-xs-4 col-md-4 col-lg-3 col-xxl-1 text-left">
+                            <button type="submit" class="btn btn-secondary btn-create-category"><span class="pr-2"><i class="fas fa-plus"></i></span>New Category</button>
+                        </div>
+                    </div>
+                    <hr class="hr-training">
+                    <div class="row training-info-block">
+                        <div class="col-sm-6 bg-white mt-4 mb-4 stat "></div>
+                    </div>
+                    <div class="row training-selecting-wrapper bg-white mt-3">
+                        <div class="col-lg-6 trainig-list-selecting d-flex justify-content-center">
+                            <h6>Search Training</h6>
+                            <input type="text" class="search-trainings form-control" placeholder="Type Training...">
+                        </div>
+                        <div class="col-lg-6 training-list-drop d-flex justify-content-center">
+                            <h6>Select category</h6>
+                            <select name="traininglist-drop-filter" class="training-drop-filter form-control">
+                                <option value="all" class="active">All</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row training-list mt-1">
+                        <div class="trainig-list-wrapper">
+                            <table class="table bg-white">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Category</th>
+                                        <th>Description</th>
+                                        <th>Costs</th>
+                                        <th>Booking</th>
+                                        <th>Delete</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="all-training-list">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!--COMMENT SECTION-->
+                <div class="cont comments-container">
+                    <div class="row row-user-header  bg-white d-flex justify-content-center align-items-center">
+                        <div class="col-sm-4 col-xs-4 col-md-4 col-lg-6 col-xxl-10 ">
+                            <h1 class="ml-5">Comments</h1>
+                        </div>
+                        <div class="col-sm-4 col-xs-4  col-md-4 col-lg-3 col-xxl-1 text-right">
+                            <button class="btn btn-primary btn-create-comment "><span class="pr-2"><i class="fas fa-plus"></i></span> New Comment</button>
+                        </div>
+                    </div>
+                    <hr class="hr-users">
+                    <div class="row users-info-block">
+                        <div class="col-sm-6 bg-white mt-4 mb-4 stat">
+                            <h6>Total Comments: <span class="totalUsers"></span></h6>
+                        </div>
+                    </div>
+                    <div class="comments-messages">
+                    </div>
+                    <div class="commentUp">
+                        <div class="comment-head">
+                            <button class="comment-btn-close btn btn-danger">X</button>
+                        </div>
+                        <div class="comment-content">
+                            <div class="comment-inputs">
+                                <label for="comment-input-headline">Headline</label>
+                                <input type="text" class="comment-input-headline form-control" placeholder="Enter Headline">
+                                <label for="comment-input-select">Employee</label>
+                                <select name="" id="" class="comment-input-select-user form-control">
+                                    <option value=""></option>
+                                </select>
+                                <label for="comment-text-area">Comment</label>
+                                <textarea name="" id="" cols="30" rows="5" class="comment-text-area form-control"
+                                    placeholder="Write Message"></textarea>
+                            </div>
+                        </div>
+                        <div class="comment-btns">
+                            <button class="btn btn-primary popUPComment-post">Post</button>
+                            <button class="btn btn-secondary popUPComment-cancel">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="general.js"></script>
+    <script src="user_interface.js"></script>
+    <script src="trainings.js"></script>
+    <script src="comments.js"></script>
+
+</body>
+
+</html>

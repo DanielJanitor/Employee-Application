@@ -1,0 +1,174 @@
+/*                             Author: Daniel Janitor                               */
+/*                             Year: 2021 - June                                    */
+/*                             Application: EMPLOYEE MANAGEMENT APPLICATION         */
+/*                             3-PART TRAININGS - CSS                               */
+
+.row-training-header {
+    height: 90px;
+}
+
+.trainings-container {
+    position: relative;
+}
+
+.training-list-wrapper {
+    height: 100%;
+    background-color: white;
+}
+
+.training-list {
+    height: auto;
+    background-color: #fff;
+    padding: 3rem;
+}
+
+.training-list-drop select {
+    cursor: pointer;
+}
+
+.hr-training {
+    color: gainsboro;
+    width: 96%;
+}
+
+.btn-create-training {
+    width: 150px;
+    border-radius: 4px;
+}
+
+.btn-create-category {
+    width: 150px;
+    border-radius: 4px;
+}
+
+.search-trainings,
+.training-drop {
+    width: 60%;
+    border-radius: 4px;
+}
+
+.trainig-list-selecting h6,
+.training-list-drop h6 {
+    padding: 0.5rem;
+}
+
+.table {
+    text-align: center;
+}
+
+.table td {
+    line-height: 50px;
+}
+
+/* Training Pop UP*/
+.activeTraining {
+    display: block;
+}
+
+.popUPTraining {
+    padding-left: 1.5rem;
+    top: 270px;
+    width: 800px;
+    height: 500px;
+    background: white;
+    border: 1px solid gainsboro;
+    border-radius: 4px;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.training-form {
+    padding-top: 2.5rem;
+}
+
+.popUPTraining-close {
+    text-align: right;
+    padding-right: 20px;
+    padding-top: 10px;
+}
+
+.popUPTraining-close-btn {
+    background-color: red;
+    width: 30px;
+    padding: 1px 3px;
+    cursor: pointer;
+}
+
+.popUPTraining-btns {
+    margin: 0 auto;
+    display: flex;
+    width: 80%;
+    justify-content: center;
+}
+
+.popUPTraining-cancel,
+.popUPTraining-save {
+    width: 30%;
+    margin: 1rem;
+}
+
+/*Pop UP Category New*/
+
+.popUPCategory {
+    padding-left: 1.5rem;
+    top: 170px;
+    width: 800px;
+    height: 300px;
+    background: white;
+    border: 1px solid gainsboro;
+    border-radius: 4px;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.popUPCategory-btns {
+    margin: 0 auto;
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    padding-top: 1rem;
+}
+
+.popUPCategory-close-btn {
+    background-color: red;
+    width: 30px;
+    padding: 1px 3px;
+    cursor: pointer;
+}
+
+.popUPCategory-cancel,
+.popUPCategory-save {
+    width: 30%;
+    margin: 1rem;
+}
+
+.category-form {
+    padding-top: 2.5rem;
+}
+
+.popUPCategory-close {
+    text-align: right;
+    padding-right: 20px;
+    padding-top: 10px;
+}
+
+.all-training-list i {
+    padding: 0.5rem;
+}
+.activeTraining{
+    display: block;
+}
+
+.activeCategory{
+    display: block;
+}
